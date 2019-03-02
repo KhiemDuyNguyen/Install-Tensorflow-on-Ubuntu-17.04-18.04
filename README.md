@@ -24,14 +24,14 @@ Overview:
 
 Let get started
 
-
-### 1. Installing fresh Ubuntu of 17.10/18.04LTS 
+**
+## 1. Installing fresh Ubuntu of 17.10/18.04LTS **
 
 You can install it here https://www.ubuntu.com/download/desktop
 
 Normal installation and no third-party apps (not sure it will affect but you can update driver later).
 
-### 2. Have a newest version of Anaconda [5.3 for me] 
+## 2. Have a newest version of Anaconda [5.3 for me] 
 
 - Install curl and use curl to download Anaconda installation script in /tmp
 ```
@@ -64,7 +64,7 @@ source ~/.bashrc
 conda list
 ```
 
-### 3. Install GPU drivers
+## 3. Install GPU drivers
 #### Requirement
 - An NVIDIA GPU with a compute capability of 3.0 or higher.
 - Check yours here https://developer.nvidia.com/cuda-gpus for enable-CUDA GPU
@@ -80,7 +80,7 @@ sudo apt install nvidia-390
 nvidia-smi
 ```
 
-### 4. Install the CUDA Toolkit (9.0)
+## 4. Install the CUDA Toolkit (9.0)
 - Go to https://developer.nvidia.com/cuda-90-download-archive 
 
 - Choose Linux => x86_64 => Ubuntu => 17.04 => deb \[local\] and Download the "Base Installer"
@@ -103,7 +103,7 @@ export PATH=/usr/local/cuda-9.0/bin${PATH:+:$PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
-### 5. Install CUDNN 7.0.5 
+## 5. Install CUDNN 7.0.5 
 - Go to https://developer.nvidia.com/cudnn
 - You will need to create an account to Download it. 
 - After sign up, find and Download CUDNN 7.0.5 for CUDA 9.0
@@ -118,7 +118,7 @@ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```
 (almost done here)
-### 6. Install Tensorflow using conda and pip
+## 6. Install Tensorflow using conda and pip
 - Create a conda environment by 
 ```
 conda create -n tf python=3.6 pip
@@ -137,7 +137,7 @@ git clone https://github.com/fchollet/keras
 cd keras
 python setup.py install
 ```
-### 7. Install dependencies (bazel)
+## 7. Install dependencies (bazel)
 - Tensorflow requires bazel to run
 - Install JDK 8
 ```
@@ -154,7 +154,7 @@ sudo apt-get update && sudo apt-get install bazel
 sudo apt-get install --only-upgrade bazel
 ```
 
-### 8. Control environment
+## 8. Control environment
 - Tensorflow will be placed inside "tf" environment of Anaconda.
 - So each time before running Tensorflow, you need
 ```
@@ -165,7 +165,7 @@ conda activate tf
 conda deactivate
 ```
 
-### 9. Finally, TEST
+## 9. Finally, TEST
 - Get in tf environment and open python
 ```
 conda activate tf
