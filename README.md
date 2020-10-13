@@ -73,7 +73,7 @@ conda list
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
-sudo apt install nvidia-390
+sudo apt install nvidia-driver-390
 ```
 - Reboot your computer. To verify the installation, type in terminal
 ```
